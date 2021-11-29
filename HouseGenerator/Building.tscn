@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Room.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Building.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Floor.gd" type="Script" id=3]
+
+[node name="Building" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Floor" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Room" type="Node2D" parent="Floor"]
+script = ExtResource( 1 )

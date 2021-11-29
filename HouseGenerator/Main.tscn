@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+
+[node name="Main" type="Node2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 12, 12 )
+cell_quadrant_size = 12
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+collision_layer = 2147483649
+collision_mask = 2147483649
+format = 1
+
+[node name="TileMap2" type="TileMap" parent="."]
+show_behind_parent = true
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 12, 12 )
+collision_layer = 2
+collision_mask = 2
+format = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 258, 150 )
+current = true
